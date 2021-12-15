@@ -1,0 +1,183 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+.heading-primary {
+    font-family: 'Libre Baskerville', serif;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    box-sizing: border-box;
+    height: 95vh;
+    background-position: center;
+    background-image:  
+        url(./pasagos.jpg);
+        /* height: 100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: top;
+    padding: 0%;
+    margin: 0%;
+}
+
+.headind-primary--first{
+    top: 10%;
+    position: absolute;
+    text-align: center;
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    margin-top: 5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    
+
+}
+
+.headind-primary--second{
+    position: absolute;
+    text-align: center;
+    display: block;
+    top: 50%;
+    left: 50%;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+
+    animation: moveInRight 2s ease-out ;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+
+
+}
+
+@keyframes moveInLeft{
+    0% { 
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    65%{
+        transform: translateX(4rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% { 
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    65%{
+        transform: translateX(-4rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.navbar {
+    position: absolute;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #333;
+    color: #eee;
+    font-size: 1.8rem;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+ .brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-size:2rem ;
+ }
+
+ .navbar-links ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+ }
+
+ .navbar-links li {
+    list-style: none;
+}
+ 
+ .navbar-links li a {
+     text-decoration: none;
+     color: white;
+     padding: 1rem;
+     display: block;
+ } 
+
+ .navbar-links li:hover {
+     background-color: #555;
+ }
+
+ .toggle-button {
+     position: absolute;
+     top: .75rem;
+     right: 1rem;
+     display: none;
+     flex-direction: column;
+     justify-content: space-between;
+     width : 3rem;
+     height: 2.1rem;
+ }
+
+ .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    }
+
+ 
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+.pav {
+    display: flex;
+    
+    background-image: url(pasagos.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 90vh;
+}
