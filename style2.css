@@ -1,0 +1,91 @@
+
+
+body {
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    
+}
+.flex {
+    display: flex;
+    gap: var(--gap, a1rem);
+}
+
+.logo {
+    margin: 2rem;
+}
+
+.primary-header {
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("pasagos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+    background-position: center;
+}
+.mobile-nav-toggle{
+    display: none;
+}
+
+.primary-navigation {
+    color: white;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 0%/ 0.5);
+
+}
+
+@supports (backdrop-filter: blur(1rem))  {
+    .primary-navigation {
+        background: hsl(0 0% 100%/ 0.1);
+        backdrop-filter: blur(1rem);
+
+    }
+}
+
+.primary-navigation a {
+    color: inherit;
+    text-decoration: none;
+
+}
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-inline-end: .75em;
+}
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        --gap:2em;
+        position: fixed;
+        z-index: 1000;
+        inset:0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible = "true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background: url("list.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 3rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    
+    }
+}
+
