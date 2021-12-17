@@ -22,7 +22,7 @@ body {
     background-image: url("pasagos.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 95vh;
+    height: 100vh;
     background-position: center;
 }
 .mobile-nav-toggle{
@@ -30,12 +30,19 @@ body {
 }
 
 .primary-navigation {
+    
     color: white;
-
+    height: 5rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    
     background: hsl(0 0% 0%/ 0.5);
+    align-items: center;
+    justify-content: end;
+    padding-block: 1rem;
+    padding-inline: clamp(3rem, 8vw,10rem);
+    padding-right: clamp(1rem, 5%, 15vw);
 
 }
 
@@ -43,19 +50,17 @@ body {
     .primary-navigation {
         background: hsl(0 0% 100%/ 0.1);
         backdrop-filter: blur(1rem);
-
     }
 }
 
 .primary-navigation a {
     color: inherit;
     text-decoration: none;
+    padding: 2rem;
 
 }
-.primary-navigation a > span {
-    font-weight: 700;
-    margin-inline-end: .75em;
-}
+
+
 
 @media (max-width: 35em) {
     .primary-navigation {
@@ -67,6 +72,7 @@ body {
         padding: min(30vh, 10rem) 2em;
         transform: translateX(100%);
         transition: transform 350ms ease-out;
+        justify-content: space-around;
     }
 
     .primary-navigation[data-visible = "true"]{
@@ -87,5 +93,6 @@ body {
         right: 2rem;
     
     }
-}
+    
 
+}
