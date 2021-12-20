@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,28 +45,33 @@
               data-visible="false">
               <li>
                 <a href="#pagrindinis">
-                  Pagrindinis 
+                  <p lang="lt">Pagrindinis</p>
+                  <p lang="en">Main</p>
                 </a>
               </li>
               <li>
                 <a href="#apie">
-                  Apie
+                  <p lang="lt"> Apie </p>
+                  <p lang="en"> About</p>
                 </a>
               </li>
               <li>
                 <a href="#kainynas">
-                  Kainynas
+                  <p lang="lt">Kainynas</p>
+                  <p lang="en">Price list</p>
                 </a>
               </li>
               <li>
                 <a href="#kontaktai">
-                  Kontaktai 
+                  <p lang="lt">Kontaktai</p> 
+                  <p lang="en">Contacts</p>
+
                 </a>
               </li>
               <li>
-                <div class="language-bar">
-                  <a class="lt" href="#">Lt</a>
-                  <a class="en" href="#">En</a>
+                <div class="language-bar" >
+                  <a onclick="changeLanguage(this)"  value="lt" id="lt" class="active" href="#">Lt</a>
+                  <a onclick="changeLanguage(this)" value="en"  id="en" href="#">En</a>
                 </div>
               </li>
             </ul>
@@ -74,7 +79,7 @@
           </nav>    
          </header>
          <div class="pagrindinis" id="pagrindinis"></div>
-         <div class="apie" id="apie"></div>
+         <div class="apie border-box" id="apie"></div>
          <div class="kainynas" id="kainynas"></div>
          <div class="kontaktai" id="kontaktai"></div>
          <!-- <div class="landing">
