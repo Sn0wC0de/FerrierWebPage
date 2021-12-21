@@ -18,18 +18,21 @@ navToggle.addEventListener('click', () => {
     }
 });
 
-function changeLanguage(el) {
-    document.body.setAttribute('lang', el.getAttribute('value'));
+// function changeLanguage(el) {
+//     document.body.setAttribute('lang', el.getAttribute('value'));
     
-}
-function  toggleActive(el) {
-    console.log(el)
-    if(el === 'lt') {
-        navLt.classList.add('active');
+// }
+function  toggleActive(e) {
+    console.log(e.srcElement.innerText)
+    document.body.setAttribute('lang', e.srcElement.innerText);
+    if(e.srcElement.innerText === 'Lt') {
         navEn.classList.remove('active')
-    } else if (el= 'en') {
-        navEn.classList.add('active');
+        navLt.classList.add('active');
+        
+    } else if (e.srcElement.innerText=== 'En') {
         navLt.classList.remove('active')
+        navEn.classList.add('active');
+        
     }
 }
 document.body.setAttribute('lang', 'lt');
@@ -38,5 +41,5 @@ document.body.setAttribute('lang', 'lt');
 // event listeners
 
 
-navLt.addEventListener('click', toggleActive('lt'))
-navEn.addEventListener('click', toggleActive('en'))
+navLt.addEventListener('click', toggleActive)
+navEn.addEventListener('click', toggleActive)
