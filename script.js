@@ -1,7 +1,6 @@
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
-const navLt = document.getElementById('lt');
-const navEn = document.getElementById('en');
+const lanBar = document.getElementById("language-bar")
 
 
 navToggle.addEventListener('click', () => {
@@ -22,7 +21,7 @@ navToggle.addEventListener('click', () => {
 //     document.body.setAttribute('lang', el.getAttribute('value'));
     
 // }
-function  toggleActive(e) {
+function  toggleActiveLang(e) {
     console.log(e.srcElement.innerText)
     document.body.setAttribute('lang', e.srcElement.innerText);
     if(e.srcElement.innerText === 'Lt') {
@@ -35,11 +34,20 @@ function  toggleActive(e) {
         
     }
 }
+
+function toggleNav(e) {
+    console.log(e.getAttribute("value"))
+    let element = document.getElementById(`${e.getAttribute("value")}`)
+    console.log(element)
+    element.classList.add('slide-in');
+    
+    
+}
+
 document.body.setAttribute('lang', 'lt');
 
 
 // event listeners
 
-
-navLt.addEventListener('click', toggleActive)
-navEn.addEventListener('click', toggleActive)
+lanBar.addEventListener('click', toggleActiveLang);
+// primaryNav.addEventListener('click', toggleNav)

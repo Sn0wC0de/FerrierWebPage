@@ -87,8 +87,14 @@ body[lang="lt"] [lang="en"]{
     }
 }
 
+
+/* .apie {
+    transform: translateX(-150%);
+} */
 .border-box {
     /* background-color: red; */
+    
+
     position: fixed;
     top: 6rem;
     border: 1rem solid hsl(0 0% 100%/ 0.5);
@@ -96,10 +102,26 @@ body[lang="lt"] [lang="en"]{
     width: max(50vw, 75ch);
     height: 80vh;
     border-radius: 10px;   
-    
+    opacity: 0;
     }
+.slide-in {
+    animation: rotate 2000ms ease-in forwards;
+}
 
+@keyframes rotate{
+    0% { 
+        opacity: 0;
+        transform: rotateY(0deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotateY(180deg);
+        opacity: 1;
 
+    }
+}
 
 
 

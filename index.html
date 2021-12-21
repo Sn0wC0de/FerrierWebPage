@@ -44,32 +44,32 @@
               id="primary-navigation"
               data-visible="false">
               <li>
-                <a href="#pagrindinis">
+                <a href="#pagrindinis"  value="main" onclick="toggleNav(this)">
                   <p lang="lt">Pagrindinis</p>
                   <p lang="en">Main</p>
                 </a>
               </li>
               <li>
-                <a href="#apie">
+                <a href="#apie" value="about" onclick="toggleNav(this)">
                   <p lang="lt"> Apie </p>
                   <p lang="en"> About</p>
                 </a>
               </li>
               <li>
-                <a href="#kainynas">
+                <a href="#kainynas" value="price" onclick="toggleNav(this)">
                   <p lang="lt">Kainynas</p>
                   <p lang="en">Price list</p>
                 </a>
               </li>
               <li>
-                <a href="#kontaktai">
+                <a href="#kontaktai" value="contacts" onclick="toggleNav(this)">
                   <p lang="lt">Kontaktai</p> 
                   <p lang="en">Contacts</p>
 
                 </a>
               </li>
               <li>
-                <div class="language-bar" >
+                <div class="language-bar" id="language-bar">
                   <a  value="lt" id="lt" class="active" href="#">Lt</a>
                   <a  value="en"  id="en" href="#">En</a>
                 </div>
@@ -78,10 +78,10 @@
             
           </nav>    
          </header>
-         <div class="pagrindinis" id="pagrindinis"></div>
-         <div class="apie border-box" id="apie"></div>
-         <div class="kainynas" id="kainynas"></div>
-         <div class="kontaktai" id="kontaktai"></div>
+         <div class="pagrindinis border-box" id="main"></div>
+         <div class="apie border-box" id="about"></div>
+         <div class="kainynas border-box" id="price"></div>
+         <div class="kontaktai border-box" id="contacts"></div>
          <!-- <div class="landing">
             <span class="headind-primary--first">Nėra vieningos nuomonės <br>
             kaip prižiūrėti Žirgų kanopas!</span>
