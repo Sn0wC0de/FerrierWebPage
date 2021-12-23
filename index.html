@@ -9,30 +9,13 @@
 <!-- 
         <link rel="stylesheet" href="css/icon-font.css"> -->
         <link rel="stylesheet" href="./style2.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
         
         <title>Kalvis</title>
         <script src="./script.js" defer></script>
     </head>
     <body>
         <header class="primary-header">
-            <!-- <nav class="navbar">
-                <div class="brand-title">Pasagų servisas</div>
-                <a href="./" class="toggle-button">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                </a>
-                <div class="navbar-links">
-                  <ul>
-                    <li><a href="./">Pagrindinis</a></li>
-                    <li><a href="./">Apie</a></li>
-                    <li><a href="./">Kontaktai</a></li>
-                  </ul>
-                </div>
-            </nav> -->
-            <!-- <navbar></navbar> -->
-
           <button 
             class="mobile-nav-toggle" 
             aria-controls="primary-navigation" aria-expanded="false">
@@ -50,7 +33,7 @@
                 </a>
               </li>
               <li>
-                <a href="#apie" value="about" onclick="toggleNav(this)">
+                <a href="#apie" value="about"  onclick="toggleNav(this)">
                   <p lang="lt"> Apie </p>
                   <p lang="en"> About</p>
                 </a>
@@ -78,10 +61,18 @@
             
           </nav>    
          </header>
-         <div class="pagrindinis border-box" id="main"></div>
-         <div class="apie border-box" id="about"></div>
-         <div class="kainynas border-box" id="price"></div>
-         <div class="kontaktai border-box" id="contacts"></div>
+         <div class="pagrindinis " id="main"></div>
+         <div class="apie border-box" id="about">
+           <img src="./portrait.jpg" alt="Portrait" class="portrait">
+           <div>
+            <h3>Apie</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum explicabo aperiam repudiandae, eaque inventore hic assumenda voluptatum ipsa tenetur animi sequi dicta quam fugit iste minus provident. Eveniet, nesciunt.h
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum explicabo aperiam repudiandae, eaque inventore hic assumenda voluptatum ipsa tenetur animi sequi dicta quam fugit iste minus provident. Eveniet, nesciunt.h
+            </p>
+           </div>
+         </div>
+         <div class="kainynas " id="price"></div>
+         <div class="kontaktai " id="contacts"></div>
          <!-- <div class="landing">
             <span class="headind-primary--first">Nėra vieningos nuomonės <br>
             kaip prižiūrėti Žirgų kanopas!</span>

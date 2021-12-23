@@ -21,6 +21,9 @@ navToggle.addEventListener('click', () => {
 //     document.body.setAttribute('lang', el.getAttribute('value'));
     
 // }
+
+
+// toggles active language style
 function  toggleActiveLang(e) {
     console.log(e.srcElement.innerText)
     document.body.setAttribute('lang', e.srcElement.innerText);
@@ -35,8 +38,9 @@ function  toggleActiveLang(e) {
     }
 }
 
+// set body language
 function toggleNav(e) {
-    console.log(e.getAttribute("value"))
+    console.log(e.getAttribute('id'))
     let element = document.getElementById(`${e.getAttribute("value")}`)
     console.log(element)
     element.classList.add('slide-in');
