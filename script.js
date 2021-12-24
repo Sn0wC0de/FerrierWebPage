@@ -1,7 +1,8 @@
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
-const lanBar = document.getElementById("language-bar")
-
+const lanBar = document.getElementById("language-bar");
+const navLt = document.getElementById('lt');
+const navEn = document.getElementById('en');
 
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible');
@@ -38,7 +39,7 @@ function  toggleActiveLang(e) {
     }
 }
 
-// set body language
+// add animation on click
 function toggleNav(e) {
     console.log(e.getAttribute('id'))
     let element = document.getElementById(`${e.getAttribute("value")}`)
