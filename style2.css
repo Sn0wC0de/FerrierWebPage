@@ -88,45 +88,47 @@ body[lang="lt"] [lang="en"]{
     margin: 0;
     top: 6rem;
     margin-left: 5rem;
-    height: auto;
-    width: max(40vw, 45ch);
+    height: 320px;
+    width: max(50vw, 65ch);
     border-radius: 10px;
     display: flex;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    /* transform: rotateY(-180deg); */
-    height: 320;
+    backface-visibility: hidden;
+
     position: fixed;
     z-index: 10;
 }
-.back {
 
-}
 .border-box {
     background: whitesmoke;
     border: 1rem solid hsl(0 0% 100%/ 0.5);
-    position: fixed; 
+    backdrop-filter: blur(1rem);
     }
-/* 
 
-.portrait {
-    padding: 1.25rem;  
+
+.back {
+        transform: rotateY(-180deg);
+    }
+
+.price {
+    
 }
 
+.slide-in-back {
+        animation: rotate1 1000ms ease-out forwards;
+    }
 
-.slide-in {
-    animation: rotate1 3000ms ease-in forwards;
-}
+.slide-in-front {
+        animation: rotate2 1000ms ease-in forwards;
+    }
+    
 
-.carf.side.front{
-    height:600px;
-}
-.card-side.back {
-    transform: rotateY(-180deg);
-  } */
+
+
   
 
-/* @keyframes rotate1{
+@keyframes rotate1{
     0% { 
         transform: rotateY(-180deg);
     }
@@ -141,10 +143,10 @@ body[lang="lt"] [lang="en"]{
         transform: rotateY(0deg);
     }
     100%{
-        transform: rotateY(-180deg);
+        transform: rotateY(180deg);
 
     }
-} */
+} 
 
 
 

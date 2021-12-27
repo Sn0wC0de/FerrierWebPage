@@ -41,10 +41,12 @@ function  toggleActiveLang(e) {
 
 // add animation on click
 function toggleNav(e) {
-    console.log(e.getAttribute('id'))
+    console.log(e.getAttribute('value'))
     let element = document.getElementById(`${e.getAttribute("value")}`)
-    console.log(element)
-    element.classList.add('slide-in');
+    console.log(element.children[0])
+    // element.children[0].classList.add('slide-in-front');
+
+    element.children[0].classList.add('slide-in-back');
     
     
 }
