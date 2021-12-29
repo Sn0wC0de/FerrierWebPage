@@ -3,6 +3,7 @@ const navToggle = document.querySelector('.mobile-nav-toggle');
 const lanBar = document.getElementById("language-bar");
 const navLt = document.getElementById('lt');
 const navEn = document.getElementById('en');
+const mainContainer = document.getElementById('main-container');
 
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible');
@@ -43,10 +44,26 @@ function  toggleActiveLang(e) {
 function toggleNav(e) {
     console.log(e.getAttribute('value'))
     let element = document.getElementById(`${e.getAttribute("value")}`)
-    console.log(element.children[0])
+    // console.log(element)
     // element.children[0].classList.add('slide-in-front');
+    if(!element.children[0].classList.contains("slide-in-back"))    {
+        let arr = [...mainContainer.children]
+        arr.map(el => {
+            console.log(el.children[0].getAttribute('class'))
+            // element.children[0] === el.children[0] ? null : el.children[0].classList.remove('slide-in-back')
+        })
+       
 
-    element.children[0].classList.add('slide-in-back');
+        // console.log([...mainContainer.children])
+        element.children[0].classList.remove('slide-in-front');
+        element.children[0].classList.add('slide-in-back');
+    } else if (element.children[0].classList.contains("slide-in-back")){
+        console.log('contains')
+        element.children[0].classList.remove('slide-in-back');
+
+        element.children[0].classList.add('slide-in-front');
+    }
+    
     
     
 }
