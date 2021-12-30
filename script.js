@@ -4,6 +4,11 @@ const lanBar = document.getElementById("language-bar");
 const navLt = document.getElementById('lt');
 const navEn = document.getElementById('en');
 const mainContainer = document.getElementById('main-container');
+const mainEl =document.getElementById('main')
+const aboutEl = document.getElementById('apie');
+const priceEl =document.getElementById('table');
+const contactsEl =document.getElementById('kontaktai');
+const navList = [aboutEl, priceEl, contactsEl];
 
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible');
@@ -40,29 +45,35 @@ function  toggleActiveLang(e) {
     }
 }
 
+
+function toggleAnimation(el) {
+      // toggles contaienr animation
+      if(!el.classList.contains("slide-in-back"))    {
+        el.classList.remove('slide-in-front');
+        el.classList.add('slide-in-back');
+    } else if (el.classList.contains("slide-in-back")){
+        console.log('contains')
+        el.classList.remove('slide-in-back');
+
+        el.classList.add('slide-in-front');
+    }
+}
+
 // add animation on click
 function toggleNav(e) {
-    console.log(e.getAttribute('value'))
-    let element = document.getElementById(`${e.getAttribute("value")}`)
-    // console.log(element)
-    // element.children[0].classList.add('slide-in-front');
-    if(!element.children[0].classList.contains("slide-in-back"))    {
-        let arr = [...mainContainer.children]
-        arr.map(el => {
-            console.log(el.children[0].getAttribute('class'))
-            // element.children[0] === el.children[0] ? null : el.children[0].classList.remove('slide-in-back')
-        })
-       
+    // console.log(e.getAttribute('value'))
+    let element = document.getElementById(`${e.getAttribute("value")}`).children[0]
+    console.log(element)
 
-        // console.log([...mainContainer.children])
-        element.children[0].classList.remove('slide-in-front');
-        element.children[0].classList.add('slide-in-back');
-    } else if (element.children[0].classList.contains("slide-in-back")){
-        console.log('contains')
-        element.children[0].classList.remove('slide-in-back');
+    navList.forEach((el)=>{
+        if(el.classList.contains('slide-in-back')) {
+            toggleAnimation(el)
+        }
+        
+    })
+    
 
-        element.children[0].classList.add('slide-in-front');
-    }
+    toggleAnimation(element) 
     
     
     
