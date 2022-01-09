@@ -4,7 +4,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  /* overflow: hidden; */
+  overflow: hidden;
+  
   margin: 0;
   padding: 0;
   background-image: url("pasagos2.jpg");
@@ -20,7 +21,7 @@ body[lang="lt"] [lang="en"] {
 
 .flex {
   display: flex;
-  gap: var(--gap, a1rem);
+  gap: var(--gap, 1rem);
 }
 
 .logo {
@@ -173,6 +174,15 @@ table td:last-child {
 }
 
 @media (max-width: 760px) {
+  body {
+    background-image: none;
+    background-color: grey;
+    width: 100vw;
+  }
+  .primary-navigation li:last-child {
+    position: relative;
+  }
+  
   .primary-navigation {
     --gap: 2em;
     position: fixed;
@@ -180,13 +190,14 @@ table td:last-child {
     inset: 0 0 0 30%;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
-    transform: translateX(100%);
+    transform: translateX(120%);
     transition: transform 350ms ease-out;
     justify-content: space-around;
+    height: 80vw;
   }
 
   .primary-navigation[data-visible="true"] {
-    transform: translateX(0%);
+    transform: translateX(20%);
   }
 
   .mobile-nav-toggle {
@@ -200,6 +211,6 @@ table td:last-child {
     border: 0;
     aspect-ratio: 1;
     top: 2rem;
-    right: 2rem;
+    right: -90vw;
   }
 }
